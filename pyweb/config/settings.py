@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-o$c&4^qpoz!+e)=^5xd^n)or-l*$*7m!8^__$(o7b#9t_k*fpg'
+SECRET_KEY = 'django-insecure-ypq=v*5%zheco2v*s#oa51y=_0lom68^qv4%%ks6opib*^=$i)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'board',
+    'common',
 ]
 
 MIDDLEWARE = [
@@ -117,8 +118,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = '/'   #로그인 성공시 루트(인덱스)로 이동
+LOGOUT_REDIRECT_URL = '/'  #로그아웃 성공시 루트(인덱스)로 이동

@@ -14,6 +14,6 @@ class AnswerForm(forms.ModelForm):
     class Meta:
         model = Answer
         fields = ['content']
-        label = {
-            'content' : '답변 내용'
+        labels = {
+            'content': '답변 내용'
         }
