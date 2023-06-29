@@ -15,5 +15,5 @@ urlpatterns = [
     path('question/delete/<int:question_id>/', views.question_delete,
          name='question_delete'),  #질문 삭제
     path('answer/delete/<int:answer_id>/', views.answer_delete,
-         name='answer_delete'),
+         name='answer_delete'),   #답변 삭제
 ]

@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-5bdakbg$yqo2a6azdp7ltdem4ih_9tneug5noxf5i%#8zf)nf!'
+SECRET_KEY = 'django-insecure-q=w53h7k)+zhk$smk0rb133rvi^3p-a7y-3=%^aizx(vcim)u7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'common',
 ]
 
 MIDDLEWARE = [
@@ -116,3 +117,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = '/blog/'    # 로그인 성공시 이동 페이지
+LOGOUT_REDIRECT_URL = '/'
